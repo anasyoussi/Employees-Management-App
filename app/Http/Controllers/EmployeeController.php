@@ -4,9 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Models\Employee;
 use Illuminate\Http\Request;
+use App\Exports\EmployeeExport;
+use Illuminate\Support\Facades\Redirect;
+use Maatwebsite\Excel\Facades\Excel;
 
 class EmployeeController extends Controller
 {
+     
+    public function exportIntoExcel()
+    {  
+        return Excel::download(new EmployeeExport, 'employeelist.xlsx');
+        return redirect()->route('employees.index');    
+    }  
+
     /**
      * Display a listing of the resource.
      *
@@ -27,6 +37,17 @@ class EmployeeController extends Controller
     {
         return view('employees.create'); 
     }
+
+    public function download()
+    {
+        return view('Employees.download'); 
+    }
+
+    // public static function getExcel()
+    // {
+    //     return Excel::download(new EmployeeExport, 'employeelist.xlsx');
+    //         //    ->redirect()->route('employees.index');
+    // }
 
     /**
      * Store a newly created resource in storage.

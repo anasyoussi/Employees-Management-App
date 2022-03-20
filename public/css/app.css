@@ -457,8 +457,32 @@ Ensure the default browser behavior of the `hidden` attribute.
     max-width: 1536px;
   }
 }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+.pointer-events-none {
+  pointer-events: none;
+}
+.absolute {
+  position: absolute;
+}
 .relative {
   position: relative;
+}
+.inset-y-0 {
+  top: 0px;
+  bottom: 0px;
+}
+.left-0 {
+  left: 0px;
 }
 .mx-4 {
   margin-left: 1rem;
@@ -468,6 +492,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: auto;
   margin-right: auto;
 }
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
 .mt-4 {
   margin-top: 1rem;
 }
@@ -476,6 +504,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mt-40 {
   margin-top: 10rem;
+}
+.mt-1 {
+  margin-top: 0.25rem;
 }
 .block {
   display: block;
@@ -492,6 +523,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-6 {
   height: 1.5rem;
 }
+.h-5 {
+  height: 1.25rem;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -506,6 +540,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-2 {
   width: 0.5rem;
+}
+.w-5 {
+  width: 1.25rem;
+}
+.w-80 {
+  width: 20rem;
 }
 .min-w-full {
   min-width: 100%;
@@ -573,6 +613,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .p-2 {
   padding: 0.5rem;
 }
+.p-4 {
+  padding: 1rem;
+}
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -604,6 +647,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+.pl-3 {
+  padding-left: 0.75rem;
+}
+.pl-10 {
+  padding-left: 2.5rem;
 }
 .text-left {
   text-align: left;
